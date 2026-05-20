@@ -18,7 +18,7 @@ Afu builds polished frontend experiences and practical full-stack systems: SaaS 
 Laravel, PHP, JavaScript, TypeScript, React, Supabase, Nuxt, Vue, Flutter, Dart, REST APIs, SQL, MySQL, PostgreSQL, SCSS, GSAP, 3D asset integration, ChatGPT/Groq LLM APIs.
 
 ## Project highlights
-- ClientFlow Lite: React/TypeScript/Supabase SaaS MVP for freelance developers and micro-agencies, covering project records, milestones, tasks, approvals, invoice visibility, and an Airtable-inspired GSAP interface. Live: https://afumoons.github.io/clientflow-lite/
+- ClientFlow Lite: React/TypeScript/Supabase SaaS MVP for freelance developers and micro-agencies, covering project records, milestones, tasks, approvals, invoice visibility, and a polished GSAP interface. Live: https://clientflow-lite.vercel.app/
 
 ## Experience highlights
 - Olympic Furniture Group (GMB): ERP Olympic contributions, D-Namis internal apps, Nuxt/GSAP campaign site, UI/UX refreshes, Flutter MORE App improvements.

@@ -6,6 +6,6 @@ GitHub: https://github.com/Afumoons
 
 /* SITE */
 Stack: React, TypeScript, Vite, GSAP, Three.js
-Featured SaaS: ClientFlow Lite — https://afumoons.github.io/clientflow-lite/
+Featured SaaS: ClientFlow Lite — https://clientflow-lite.vercel.app/
 Purpose: Portfolio landing page for potential clients and collaborators
 SEO: robots.txt, sitemap.xml, JSON-LD, Open Graph, llms.txt

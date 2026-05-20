@@ -13,9 +13,9 @@ const projects = [
   {
     name: 'ClientFlow Lite — SaaS Client Portal',
     type: 'Founder SaaS Product',
-    summary: 'Built a global-first SaaS MVP for freelance developers and micro-agencies: an Airtable-inspired client portal for projects, milestones, tasks, approvals, and invoice visibility on a zero-cost Vercel/GitHub Pages + Supabase stack.',
+    summary: 'Built a global-first SaaS MVP for freelance developers and micro-agencies: a polished client portal for projects, milestones, tasks, approvals, and invoice visibility on a lean Vercel + Supabase stack.',
     stack: ['React', 'TypeScript', 'Supabase', 'GSAP', 'SaaS MVP'],
-    link: 'https://afumoons.github.io/clientflow-lite/',
+    link: 'https://clientflow-lite.vercel.app/',
   },
   {
     name: 'Audit Mutu — AI-Powered Quality Audit Platform',

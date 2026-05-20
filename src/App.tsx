@@ -1,6 +1,6 @@
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Float, MeshTransmissionMaterial, OrbitControls } from '@react-three/drei'
-import { Suspense, useEffect, useMemo, useRef } from 'react'
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowUpRight, BrainCircuit, BriefcaseBusiness, Code2, DatabaseZap, GraduationCap, Layers3, Mail, Rocket, ShieldCheck, Sparkles } from 'lucide-react'
@@ -53,6 +53,8 @@ const experiences = [
   ['PT Utama Padma Qualiti (UPQuality)', 'Full Stack Web Developer', 'Mar 2022 – Dec 2023', 'Built Audit Mutu, integrated ChatGPT/Groq-powered audit assistant, and delivered Agile/Scrum product increments for Indonesian institutions.'],
   ['PT Tatacipta Teknologi Indonesia', 'Web Developer', 'Aug 2021 – Oct 2022', 'Developed Laravel-based government web applications, translated UI/UX specs into interfaces, and contributed to code reviews and Agile ceremonies.'],
 ]
+
+const techStack = ['LARAVEL', 'PHP', 'REACT', 'NUXT', 'VUE', 'FLUTTER', 'REST API', 'MYSQL', 'POSTGRESQL', 'GSAP', 'THREE.JS', 'LLM API']
 
 const capabilities = [
   ['Full-stack Delivery', 'Laravel/PHP, JavaScript, React, Nuxt/Vue, Flutter, REST APIs, SQL, MySQL/PostgreSQL, and pragmatic deployment work.'],
@@ -118,10 +120,39 @@ function Scene() {
 
 function App() {
   const year = useMemo(() => new Date().getFullYear(), [])
+  const [loading, setLoading] = useState(true)
+  const cursorRef = useRef<HTMLDivElement>(null)
+  const [cursorVariant, setCursorVariant] = useState<'default' | 'project'>('default')
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setLoading(false), 850)
+    const moveCursor = (event: MouseEvent) => {
+      if (!cursorRef.current) return
+      gsap.to(cursorRef.current, { x: event.clientX, y: event.clientY, duration: 0.12, ease: 'power2.out' })
+    }
+    window.addEventListener('mousemove', moveCursor, { passive: true })
+    return () => {
+      window.clearTimeout(timer)
+      window.removeEventListener('mousemove', moveCursor)
+    }
+  }, [])
+
+  const handleMagneticMove = (event: React.MouseEvent<HTMLElement>) => {
+    const target = event.currentTarget
+    const rect = target.getBoundingClientRect()
+    const x = event.clientX - rect.left - rect.width / 2
+    const y = event.clientY - rect.top - rect.height / 2
+    gsap.to(target, { x: x * 0.18, y: y * 0.18, duration: 0.35, ease: 'power3.out' })
+  }
+
+  const handleMagneticLeave = (event: React.MouseEvent<HTMLElement>) => {
+    gsap.to(event.currentTarget, { x: 0, y: 0, duration: 0.65, ease: 'elastic.out(1, 0.35)' })
+  }
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.hero-copy > *', { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power4.out', stagger: 0.1 })
+      gsap.to('.loading-screen', { yPercent: -100, duration: 0.85, ease: 'power4.inOut', delay: 0.05 })
+      gsap.fromTo('.hero-copy > *', { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power4.out', stagger: 0.1, delay: 0.12 })
       gsap.fromTo('.visual-card', { scale: 0.94, rotate: -3, opacity: 0 }, { scale: 1, rotate: 0, opacity: 1, duration: 1.2, ease: 'elastic.out(1, .75)', delay: 0.2 })
 
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
@@ -157,13 +188,30 @@ function App() {
       })
 
       gsap.to('.orbit-line', { rotate: 360, duration: 28, repeat: -1, ease: 'none' })
+      gsap.to('.tech-track', { xPercent: -50, duration: 24, repeat: -1, ease: 'none' })
     })
     return () => ctx.revert()
   }, [])
 
   return (
-    <main>
+    <main className={loading ? 'is-loading' : ''}>
       <div className="scroll-progress" aria-hidden="true" />
+      <div className="loading-screen" aria-hidden={!loading}>
+        <div>
+          <span>AFU</span>
+          <p>Loading interface</p>
+        </div>
+      </div>
+      <div ref={cursorRef} className={`custom-cursor ${cursorVariant === 'project' ? 'is-project' : ''}`} aria-hidden="true">
+        <span>VIEW</span>
+      </div>
+      <div className="section-dots" aria-label="Section shortcuts">
+        <a href="#top" aria-label="Hero" />
+        <a href="#capabilities" aria-label="Capabilities" />
+        <a href="#experience" aria-label="Experience" />
+        <a href="#work" aria-label="Work" />
+        <a href="#contact" aria-label="Contact" />
+      </div>
       <nav className="nav" aria-label="Main navigation">
         <a className="brand" href="#top" aria-label="Afu portfolio home">Afu<span>.</span></a>
         <div>
@@ -182,8 +230,8 @@ function App() {
             I build production-ready web and mobile applications across ERP systems, e-commerce flows, AI-integrated tools, government portals, and motion-rich frontend experiences.
           </p>
           <div className="hero-actions">
-            <a className="primary" href="mailto:afusidhipamekas@gmail.com,afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu">Start a project <ArrowUpRight size={18} /></a>
-            <a className="secondary" href="https://github.com/Afumoons" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={18} /></a>
+            <a className="primary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="mailto:afusidhipamekas@gmail.com,afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu">Start a project <ArrowUpRight size={18} /></a>
+            <a className="secondary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="https://github.com/Afumoons" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={18} /></a>
           </div>
           <dl className="hero-stats" aria-label="Professional snapshot">
             <div><dt>Experience</dt><dd>3+ years production delivery</dd></div>
@@ -203,8 +251,12 @@ function App() {
         </aside>
       </section>
 
-      <section className="marquee" aria-label="Core technologies">
-        <span>Laravel</span><span>PHP</span><span>React</span><span>Nuxt</span><span>Vue</span><span>Flutter</span><span>REST APIs</span><span>MySQL</span><span>PostgreSQL</span><span>GSAP</span><span>LLM APIs</span>
+      <section className="tech-marquee" aria-label="Core technologies">
+        <div className="tech-track">
+          {[...techStack, ...techStack].map((tech, index) => (
+            <span key={`${tech}-${index}`}>{tech}</span>
+          ))}
+        </div>
       </section>
 
       <section className="section intro-grid" data-reveal>
@@ -253,7 +305,7 @@ function App() {
         </div>
         <div className="work-list">
           {projects.map((project, index) => (
-            <article className="work-card" data-reveal key={project.name}>
+            <article className="work-card" data-reveal key={project.name} onMouseEnter={() => setCursorVariant('project')} onMouseLeave={() => setCursorVariant('default')}>
               <span className="work-number">0{index + 1}</span>
               <div>
                 <p className="work-type">{project.type}</p>
@@ -290,9 +342,9 @@ function App() {
         <h2>Need a frontend that looks premium and a system that actually works?</h2>
         <p>Send a short brief. I can help with landing pages, ERP modules, dashboards, AI-assisted workflows, and full-stack product delivery.</p>
         <div className="contact-actions">
-          <a className="primary" href="mailto:afusidhipamekas@gmail.com,afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> afusidhipamekas@gmail.com</a>
-          <a className="secondary" href="mailto:afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> afumoons@gmail.com</a>
-          <a className="secondary" href="https://github.com/Afumoons" target="_blank" rel="noreferrer"><Rocket size={18} /> View GitHub</a>
+          <a className="primary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="mailto:afusidhipamekas@gmail.com,afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> afusidhipamekas@gmail.com</a>
+          <a className="secondary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="mailto:afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> afumoons@gmail.com</a>
+          <a className="secondary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="https://github.com/Afumoons" target="_blank" rel="noreferrer"><Rocket size={18} /> View GitHub</a>
         </div>
       </section>
 

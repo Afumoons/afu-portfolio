@@ -1,11 +1,11 @@
 # Afu Portfolio
 
-A responsive, SEO-friendly portfolio landing page for Afu / Afumoons.
+A responsive, SEO-friendly portfolio landing page for Afu Sidhi Pamekas / Afumoons.
 
 ## Stack
 
 - React + TypeScript + Vite
-- GSAP / ScrollTrigger
+- GSAP ScrollTrigger
 - Three.js via React Three Fiber
 - Static SEO assets: `robots.txt`, `sitemap.xml`, `llms.txt`, JSON-LD, Open Graph
 
@@ -36,6 +36,6 @@ https://afumoons.github.io/afu-portfolio/
 
 ## Content notes
 
-- Portrait is intentionally a placeholder.
-- Contact email is intentionally a placeholder (`hello@example.com`) and should be replaced before serious client outreach.
-- Professional content is based on Afu's known public/professional profile: senior full-stack engineering, Laravel/PHP, React/Nuxt/Vue, Flutter, REST APIs, SQL, ERP/internal systems, audit workflows, realtime products, and AI-assisted automation.
+- Portrait currently uses `public/afu-portrait.png` from Afu's supplied reference photo with CSS lighting treatment. The image-generation provider was unavailable during this update, so a generated editorial portrait can replace it later.
+- Contact emails: `afusidhipamekas@gmail.com`, `afumoons@gmail.com`.
+- Professional content includes CV-derived experience: Olympic Furniture Group, UPQuality / Audit Mutu, PT Tatacipta Teknologi Indonesia, Ereses Mojokerto, D-Namis, MORE App, and GSAP/3D campaign work.

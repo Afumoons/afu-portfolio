@@ -3,7 +3,7 @@ import { Float, MeshTransmissionMaterial, OrbitControls } from '@react-three/dre
 import { Suspense, useEffect, useMemo, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { ArrowUpRight, BrainCircuit, Code2, DatabaseZap, Layers3, Mail, Rocket, ShieldCheck, Sparkles } from 'lucide-react'
+import { ArrowUpRight, BrainCircuit, BriefcaseBusiness, Code2, DatabaseZap, GraduationCap, Layers3, Mail, Rocket, ShieldCheck, Sparkles } from 'lucide-react'
 import type { Mesh } from 'three'
 import './App.css'
 
@@ -11,36 +11,54 @@ gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
+    name: 'Audit Mutu — AI-Powered Quality Audit Platform',
+    type: 'AI + SaaS Workflow',
+    summary: 'Led a digital audit platform deployed at FK Universitas Trisakti and FK Universitas Muhammadiyah Semarang, reducing audit completion time by 30% with LLM-powered document analysis and auditor support.',
+    stack: ['Laravel', 'ReactJS', 'ChatGPT', 'Groq', 'SCSS'],
+  },
+  {
     name: 'Olympic Furniture Group ERP',
-    type: 'Enterprise Systems',
-    summary: 'Internal ERP, operational dashboards, production workflows, and business tools for a furniture group environment.',
-    stack: ['Laravel', 'PHP', 'Vue/Nuxt', 'MySQL', 'REST API'],
+    type: 'Enterprise Operations',
+    summary: 'Contributed to ERP Olympic for 50+ internal users across Procurement, Sales, Warehouse & Inventory, Marketing Operations, and Accounting with a focus on backend logic, integration, and data consistency.',
+    stack: ['Laravel', 'PHP', 'SQL', 'REST APIs', 'ERP'],
   },
   {
-    name: 'UPQuality Audit Mutu',
-    type: 'AI-assisted Audit Platform',
-    summary: 'Audit and quality-control application with AI assistant thinking applied to structured operational workflows.',
-    stack: ['Laravel', 'AI UX', 'Dashboard', 'SQL'],
+    name: 'D-Namis Internal Apps',
+    type: 'Lead Developer',
+    summary: 'Designed and owned two internal applications for ~20 users: a lightweight CMS for corporate microsites and an asset lending system for the Production House division.',
+    stack: ['Laravel', 'CMS', 'MySQL', 'Internal Tools'],
   },
   {
-    name: 'Aurora Chat',
-    type: 'Realtime Product',
-    summary: 'Modern chat system with WebSocket/Socket.IO architecture and a Next.js frontend direction.',
-    stack: ['Next.js', 'TypeScript', 'Socket.IO', 'REST'],
+    name: '#dudukgaktakutambruk Campaign Site',
+    type: 'Interactive Frontend',
+    summary: 'Built a motion-rich campaign website using Nuxt.js, GSAP animations, and integrated 3D furniture assets to elevate a brand marketing experience.',
+    stack: ['Nuxt.js', 'GSAP', '3D Assets', 'Responsive UI'],
   },
   {
-    name: 'Autonomous Trading AI',
-    type: 'Data + Automation',
-    summary: 'Research-to-live trading system with strategy pools, MT5 execution, live monitoring, and operator tooling.',
-    stack: ['Python', 'MT5', 'Data Pipelines', 'Risk Systems'],
+    name: 'MORE App — Mobile Commerce Flow',
+    type: 'Mobile UX',
+    summary: 'Improved UI and corrected app flow issues for GMB’s proprietary Flutter-based mobile e-commerce platform.',
+    stack: ['Flutter', 'Dart', 'Mobile UI/UX'],
+  },
+  {
+    name: 'Ereses Mojokerto — DPRD Portal',
+    type: 'Government Portal',
+    summary: 'Designed and implemented a citizen-facing portal for Mojokerto Regency’s legislative body with CMS-backed information services and online complaint features.',
+    stack: ['Laravel', 'PHP', 'CMS', 'Accessible UI'],
   },
 ]
 
+const experiences = [
+  ['Olympic Furniture Group (GMB)', 'Full Stack Web Developer', 'Nov 2024 – Oct 2025', 'Enterprise ERP, D-Namis internal apps, Nuxt/GSAP marketing campaigns, brand UI refreshes, and Flutter MORE App improvements.'],
+  ['PT Utama Padma Qualiti (UPQuality)', 'Full Stack Web Developer', 'Mar 2022 – Dec 2023', 'Built Audit Mutu, integrated ChatGPT/Groq-powered audit assistant, and delivered Agile/Scrum product increments for Indonesian institutions.'],
+  ['PT Tatacipta Teknologi Indonesia', 'Web Developer', 'Aug 2021 – Oct 2022', 'Developed Laravel-based government web applications, translated UI/UX specs into interfaces, and contributed to code reviews and Agile ceremonies.'],
+]
+
 const capabilities = [
-  ['Full-stack Delivery', 'Laravel/PHP, JavaScript, React, Nuxt/Vue, Flutter, REST APIs, SQL, and pragmatic deployment work.'],
-  ['Frontend Craft', 'Responsive interfaces, motion systems, dashboards, design systems, conversion-focused landing pages.'],
-  ['Operational Systems', 'ERP, internal tools, audit workflows, admin dashboards, data models, and role-based product logic.'],
-  ['AI & Automation', 'AI-assisted workflows, trading automation, data pipelines, agent-friendly documentation, and monitoring.'],
+  ['Full-stack Delivery', 'Laravel/PHP, JavaScript, React, Nuxt/Vue, Flutter, REST APIs, SQL, MySQL/PostgreSQL, and pragmatic deployment work.'],
+  ['Frontend Craft', 'Responsive interfaces, motion systems, dashboards, design systems, conversion-focused landing pages, GSAP, and 3D asset integration.'],
+  ['Operational Systems', 'ERP, CMS, internal tools, audit workflows, admin dashboards, data models, reporting, and role-based product logic.'],
+  ['AI & Automation', 'LLM integrations with ChatGPT/Groq, AI-powered chatbots, document analysis automation, trading automation, and monitoring.'],
 ]
 
 function KineticArtifact() {
@@ -103,34 +121,54 @@ function App() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo('.hero-copy > *', { y: 42, opacity: 0 }, { y: 0, opacity: 1, duration: 1.1, ease: 'power4.out', stagger: 0.11 })
-      gsap.fromTo('.visual-card', { scale: 0.92, rotate: -4, opacity: 0 }, { scale: 1, rotate: 0, opacity: 1, duration: 1.2, ease: 'elastic.out(1, .7)', delay: 0.2 })
+      gsap.fromTo('.hero-copy > *', { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: 'power4.out', stagger: 0.1 })
+      gsap.fromTo('.visual-card', { scale: 0.94, rotate: -3, opacity: 0 }, { scale: 1, rotate: 0, opacity: 1, duration: 1.2, ease: 'elastic.out(1, .75)', delay: 0.2 })
+
       gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
         gsap.fromTo(el, { y: 54, opacity: 0 }, {
           y: 0,
           opacity: 1,
           duration: 0.9,
           ease: 'power3.out',
-          scrollTrigger: { trigger: el, start: 'top 84%' },
+          scrollTrigger: { trigger: el, start: 'top 84%', toggleActions: 'play none none reverse' },
         })
       })
-      gsap.to('.orbit-line', {
-        rotate: 360,
-        duration: 28,
-        repeat: -1,
-        ease: 'none',
+
+      gsap.utils.toArray<HTMLElement>('[data-parallax]').forEach((el) => {
+        gsap.to(el, {
+          yPercent: -12,
+          ease: 'none',
+          scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true },
+        })
       })
+
+      gsap.to('.scroll-progress', {
+        scaleX: 1,
+        ease: 'none',
+        scrollTrigger: { trigger: document.documentElement, start: 'top top', end: 'bottom bottom', scrub: 0.2 },
+      })
+
+      ScrollTrigger.create({
+        trigger: '.experience-rail',
+        start: 'top 70%',
+        end: 'bottom 60%',
+        onEnter: () => document.body.classList.add('timeline-active'),
+        onLeaveBack: () => document.body.classList.remove('timeline-active'),
+      })
+
+      gsap.to('.orbit-line', { rotate: 360, duration: 28, repeat: -1, ease: 'none' })
     })
     return () => ctx.revert()
   }, [])
 
   return (
     <main>
+      <div className="scroll-progress" aria-hidden="true" />
       <nav className="nav" aria-label="Main navigation">
         <a className="brand" href="#top" aria-label="Afu portfolio home">Afu<span>.</span></a>
         <div>
           <a href="#work">Work</a>
-          <a href="#capabilities">Capabilities</a>
+          <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -139,43 +177,43 @@ function App() {
         <div className="grain" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow"><Sparkles size={16} /> Surabaya-based senior full-stack engineer</p>
-          <h1>Frontend polish, backend discipline, and product systems that survive real operations.</h1>
+          <h1>Design-led full-stack engineering for systems that need to look sharp and work hard.</h1>
           <p className="lead">
-            I build responsive web products, internal ERPs, dashboards, realtime apps, and AI-assisted workflows — with a strong eye for interface detail and the engineering habits to ship.
+            I build production-ready web and mobile applications across ERP systems, e-commerce flows, AI-integrated tools, government portals, and motion-rich frontend experiences.
           </p>
           <div className="hero-actions">
-            <a className="primary" href="mailto:hello@example.com?subject=Project%20inquiry%20for%20Afu">Start a project <ArrowUpRight size={18} /></a>
+            <a className="primary" href="mailto:afusidhipamekas@gmail.com,afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu">Start a project <ArrowUpRight size={18} /></a>
             <a className="secondary" href="https://github.com/Afumoons" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={18} /></a>
           </div>
           <dl className="hero-stats" aria-label="Professional snapshot">
+            <div><dt>Experience</dt><dd>3+ years production delivery</dd></div>
             <div><dt>Stack</dt><dd>Laravel · React · Nuxt · Flutter</dd></div>
-            <div><dt>Focus</dt><dd>ERP · Dashboards · AI workflows</dd></div>
-            <div><dt>Base</dt><dd>Surabaya, Indonesia</dd></div>
+            <div><dt>Impact</dt><dd>ERP · AI audit · 30% faster audits</dd></div>
           </dl>
         </div>
 
-        <aside className="visual-card" aria-label="Profile placeholder and 3D portfolio artifact">
-          <div className="portrait-placeholder">
-            <span>Photo placeholder</span>
-            <small>Replace with Afu portrait</small>
+        <aside className="visual-card" aria-label="Afu portrait and 3D portfolio artifact" data-parallax>
+          <div className="portrait-frame">
+            <img src="/afu-portfolio/afu-portrait.png" alt="Afu Sidhi Pamekas portrait" />
+            <span className="portrait-glow" aria-hidden="true" />
           </div>
           <div className="canvas-wrap"><Scene /></div>
           <div className="orbit-line" aria-hidden="true" />
-          <p className="card-caption">Design-aware engineering for clients who need both sharp UI and dependable systems.</p>
+          <p className="card-caption">Design-aware engineering for clients who need sharp UI, reliable systems, and fast execution.</p>
         </aside>
       </section>
 
       <section className="marquee" aria-label="Core technologies">
-        <span>Laravel</span><span>PHP</span><span>React</span><span>Nuxt</span><span>Vue</span><span>Flutter</span><span>REST APIs</span><span>MySQL</span><span>PostgreSQL</span><span>GSAP</span>
+        <span>Laravel</span><span>PHP</span><span>React</span><span>Nuxt</span><span>Vue</span><span>Flutter</span><span>REST APIs</span><span>MySQL</span><span>PostgreSQL</span><span>GSAP</span><span>LLM APIs</span>
       </section>
 
       <section className="section intro-grid" data-reveal>
         <div>
           <p className="section-kicker">Professional profile</p>
-          <h2>Senior full-stack engineer with a taste for polished interfaces and operational depth.</h2>
+          <h2>Senior full-stack engineer with frontend taste and operational depth.</h2>
         </div>
         <p>
-          Afu has delivered ERP/internal applications, marketing surfaces, audit systems, government-style Laravel portals, and realtime product experiments. The work combines full-stack pragmatism with a growing frontend/design edge: motion, responsiveness, conversion clarity, and maintainable code.
+          Afu has 3+ years of experience delivering scalable production-ready applications: enterprise ERP, e-commerce and mobile flows, AI-integrated audit tools, CMS-backed portals, and brand-facing campaign sites. The throughline is practical ownership — from architecture and backend logic to responsive UI, motion, and deployable outcomes.
         </p>
       </section>
 
@@ -187,6 +225,25 @@ function App() {
             <p>{text}</p>
           </article>
         ))}
+      </section>
+
+      <section className="section experience-section" id="experience">
+        <div className="section-heading" data-reveal>
+          <p className="section-kicker"><BriefcaseBusiness size={16} /> Experience</p>
+          <h2>Built inside real organizations, not just portfolio sandboxes.</h2>
+        </div>
+        <div className="experience-rail">
+          {experiences.map(([company, role, period, detail]) => (
+            <article className="experience-card" data-reveal key={company}>
+              <span>{period}</span>
+              <div>
+                <h3>{company}</h3>
+                <p className="role">{role}</p>
+                <p>{detail}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="section work-section" id="work">
@@ -219,8 +276,13 @@ function App() {
         <div className="trust-grid">
           <p><strong>Clear execution.</strong> From vague operational needs to scoped features, database shape, UI, and deployment path.</p>
           <p><strong>Modern interaction.</strong> Motion, responsiveness, accessibility, SEO metadata, and detail that makes the product feel premium.</p>
-          <p><strong>Practical systems thinking.</strong> Admin panels, audit trails, roles, reporting, API boundaries, and maintainable workflows.</p>
+          <p><strong>Practical systems thinking.</strong> Admin panels, audit trails, CMS, ERP logic, reporting, API boundaries, and maintainable workflows.</p>
         </div>
+      </section>
+
+      <section className="section education-strip" data-reveal>
+        <GraduationCap size={24} />
+        <p><strong>Bachelor’s Degree — Management Information Systems</strong>, UPN “Veteran” Jawa Timur · GPA 3.62 / 4.00 · BNSP Junior Web Programmer Certificate.</p>
       </section>
 
       <section className="section contact" id="contact" data-reveal>
@@ -228,13 +290,14 @@ function App() {
         <h2>Need a frontend that looks premium and a system that actually works?</h2>
         <p>Send a short brief. I can help with landing pages, ERP modules, dashboards, AI-assisted workflows, and full-stack product delivery.</p>
         <div className="contact-actions">
-          <a className="primary" href="mailto:hello@example.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> Email placeholder</a>
+          <a className="primary" href="mailto:afusidhipamekas@gmail.com,afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> afusidhipamekas@gmail.com</a>
+          <a className="secondary" href="mailto:afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> afumoons@gmail.com</a>
           <a className="secondary" href="https://github.com/Afumoons" target="_blank" rel="noreferrer"><Rocket size={18} /> View GitHub</a>
         </div>
       </section>
 
       <footer>
-        <p>© {year} Afu — Full-stack web engineer. Built with React, GSAP, and Three.js.</p>
+        <p>© {year} Afu Sidhi Pamekas — Senior Full-stack web engineer. Built with React, GSAP ScrollTrigger, and Three.js.</p>
         <a href="#top">Back to top</a>
       </footer>
     </main>

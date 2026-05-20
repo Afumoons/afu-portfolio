@@ -3,23 +3,25 @@
 A crawler- and AI-agent-friendly summary of this website.
 
 ## Identity
-- Name: Afu
+- Name: Afu Sidhi Pamekas
+- Also known as: Afumoons
 - GitHub: https://github.com/Afumoons
+- LinkedIn: https://linkedin.com/in/afu-sidhipamekas-62b725194
 - Location: Surabaya, Indonesia
 - Role: Senior Full Stack Engineer
+- Email: afusidhipamekas@gmail.com, afumoons@gmail.com
 
 ## Professional focus
-Afu builds polished frontend experiences and practical full-stack systems: ERP/internal applications, dashboards, audit workflows, realtime products, AI-assisted workflows, marketing pages, and REST API-backed applications.
+Afu builds polished frontend experiences and practical full-stack systems: ERP/internal applications, CMS tools, dashboards, audit workflows, AI-integrated tools, mobile commerce flows, government portals, marketing campaign pages, and REST API-backed applications.
 
 ## Core stack
-Laravel, PHP, JavaScript, TypeScript, React, Nuxt, Vue, Flutter, REST APIs, MySQL, PostgreSQL, Python automation, GSAP, Three.js.
+Laravel, PHP, JavaScript, TypeScript, React, Nuxt, Vue, Flutter, Dart, REST APIs, SQL, MySQL, PostgreSQL, SCSS, GSAP, 3D asset integration, ChatGPT/Groq LLM APIs.
 
-## Representative work areas
-- Olympic Furniture Group ERP/internal applications/marketing sites/MORE app
-- UPQuality Audit Mutu with AI assistant workflow direction
-- Government-style Laravel portals
-- Aurora Chat realtime product architecture
-- Autonomous Trading AI data + automation system
+## Experience highlights
+- Olympic Furniture Group (GMB): ERP Olympic contributions, D-Namis internal apps, Nuxt/GSAP campaign site, UI/UX refreshes, Flutter MORE App improvements.
+- PT Utama Padma Qualiti: Audit Mutu AI-powered quality audit platform, deployed at FK Universitas Trisakti and FK Universitas Muhammadiyah Semarang; 30% audit completion time reduction.
+- PT Tatacipta Teknologi Indonesia: Laravel-based government web applications and stakeholder portals.
 
-## Contact
-The page currently uses an email placeholder. Replace it before production client outreach.
+## Education / certification
+- Bachelor's Degree, Management Information Systems — UPN “Veteran” Jawa Timur, GPA 3.62 / 4.00.
+- BNSP Junior Web Programmer Competency Certificate.

@@ -1,0 +1,25 @@
+# Afu Portfolio
+
+A crawler- and AI-agent-friendly summary of this website.
+
+## Identity
+- Name: Afu
+- GitHub: https://github.com/Afumoons
+- Location: Surabaya, Indonesia
+- Role: Senior Full Stack Engineer
+
+## Professional focus
+Afu builds polished frontend experiences and practical full-stack systems: ERP/internal applications, dashboards, audit workflows, realtime products, AI-assisted workflows, marketing pages, and REST API-backed applications.
+
+## Core stack
+Laravel, PHP, JavaScript, TypeScript, React, Nuxt, Vue, Flutter, REST APIs, MySQL, PostgreSQL, Python automation, GSAP, Three.js.
+
+## Representative work areas
+- Olympic Furniture Group ERP/internal applications/marketing sites/MORE app
+- UPQuality Audit Mutu with AI assistant workflow direction
+- Government-style Laravel portals
+- Aurora Chat realtime product architecture
+- Autonomous Trading AI data + automation system
+
+## Contact
+The page currently uses an email placeholder. Replace it before production client outreach.

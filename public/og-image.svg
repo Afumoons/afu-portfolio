@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g1" cx="20%" cy="10%" r="70%"><stop stop-color="#d7ff51" stop-opacity="0.5"/><stop offset="1" stop-color="#10110d" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g2" cx="90%" cy="20%" r="60%"><stop stop-color="#8ffcff" stop-opacity="0.35"/><stop offset="1" stop-color="#10110d" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#10110d"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect width="1200" height="630" fill="url(#g2)"/>
+  <circle cx="930" cy="315" r="160" fill="none" stroke="#d7ff51" stroke-width="3" opacity="0.8"/>
+  <path d="M847 314 930 170l83 144-83 144z" fill="#8ffcff" fill-opacity="0.18" stroke="#8ffcff" stroke-width="4"/>
+  <text x="80" y="150" fill="#d7ff51" font-family="Verdana, sans-serif" font-size="28" font-weight="700" letter-spacing="8">AFUMOONS</text>
+  <text x="76" y="310" fill="#f4f0e8" font-family="Georgia, serif" font-size="94" letter-spacing="-5">Afu Portfolio</text>
+  <text x="82" y="382" fill="#a9aaa4" font-family="Verdana, sans-serif" font-size="30">Senior Full‑Stack Web Engineer</text>
+  <text x="82" y="438" fill="#f4f0e8" opacity="0.82" font-family="Verdana, sans-serif" font-size="24">Laravel · React · Nuxt · Flutter · ERP · AI Workflows</text>
+</svg>

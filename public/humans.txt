@@ -1,0 +1,10 @@
+/* TEAM */
+Owner: Afu / Afumoons
+Role: Senior Full Stack Engineer
+Location: Surabaya, Indonesia
+GitHub: https://github.com/Afumoons
+
+/* SITE */
+Stack: React, TypeScript, Vite, GSAP, Three.js
+Purpose: Portfolio landing page for potential clients and collaborators
+SEO: robots.txt, sitemap.xml, JSON-LD, Open Graph, llms.txt

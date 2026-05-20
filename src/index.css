@@ -1,0 +1,16 @@
+html {
+  background: #10110d;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: #d7ff51;
+  color: #10110d;
+}

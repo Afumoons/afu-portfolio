@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from '@react-three/fiber'
-import { Float, MeshTransmissionMaterial, OrbitControls, Text3D } from '@react-three/drei'
+import { Float, MeshTransmissionMaterial, OrbitControls } from '@react-three/drei'
 import { Suspense, useEffect, useMemo, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -76,10 +76,10 @@ function KineticArtifact() {
           anisotropy={0.25}
         />
       </mesh>
-      <Text3D font="/fonts/helvetiker_regular.typeface.json" size={0.16} height={0.018} position={[-0.58, -1.55, 0.18]}>
-        AFU
-        <meshStandardMaterial color="#f8fafc" emissive="#ffffff" emissiveIntensity={0.32} />
-      </Text3D>
+      <mesh position={[0, -1.42, 0.1]} rotation={[0, 0, Math.PI / 4]}>
+        <boxGeometry args={[0.42, 0.42, 0.035]} />
+        <meshStandardMaterial color="#f8fafc" emissive="#ffffff" emissiveIntensity={0.28} />
+      </mesh>
     </Float>
   )
 }

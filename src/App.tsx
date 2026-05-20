@@ -11,6 +11,13 @@ gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
+    name: 'ClientFlow Lite — SaaS Client Portal',
+    type: 'Founder SaaS Product',
+    summary: 'Built a global-first SaaS MVP for freelance developers and micro-agencies: an Airtable-inspired client portal for projects, milestones, tasks, approvals, and invoice visibility on a zero-cost Vercel/GitHub Pages + Supabase stack.',
+    stack: ['React', 'TypeScript', 'Supabase', 'GSAP', 'SaaS MVP'],
+    link: 'https://afumoons.github.io/clientflow-lite/',
+  },
+  {
     name: 'Audit Mutu — AI-Powered Quality Audit Platform',
     type: 'AI + SaaS Workflow',
     summary: 'Led a digital audit platform deployed at FK Universitas Trisakti and FK Universitas Muhammadiyah Semarang, reducing audit completion time by 30% with LLM-powered document analysis and auditor support.',
@@ -54,7 +61,7 @@ const experiences = [
   ['PT Tatacipta Teknologi Indonesia', 'Web Developer', 'Aug 2021 – Oct 2022', 'Developed Laravel-based government web applications, translated UI/UX specs into interfaces, and contributed to code reviews and Agile ceremonies.'],
 ]
 
-const techStack = ['LARAVEL', 'PHP', 'REACT', 'NUXT', 'VUE', 'FLUTTER', 'REST API', 'MYSQL', 'POSTGRESQL', 'GSAP', 'THREE.JS', 'LLM API']
+const techStack = ['LARAVEL', 'PHP', 'REACT', 'TYPESCRIPT', 'SUPABASE', 'NUXT', 'VUE', 'FLUTTER', 'REST API', 'MYSQL', 'POSTGRESQL', 'GSAP', 'THREE.JS', 'LLM API']
 
 const capabilities = [
   ['Full-stack Delivery', 'Laravel/PHP, JavaScript, React, Nuxt/Vue, Flutter, REST APIs, SQL, MySQL/PostgreSQL, and pragmatic deployment work.'],
@@ -311,6 +318,7 @@ function App() {
                 <p className="work-type">{project.type}</p>
                 <h3>{project.name}</h3>
                 <p>{project.summary}</p>
+                {'link' in project && project.link && <a className="work-link" href={project.link} target="_blank" rel="noreferrer">View live SaaS <ArrowUpRight size={16} /></a>}
                 <ul>
                   {project.stack.map((item) => <li key={item}>{item}</li>)}
                 </ul>

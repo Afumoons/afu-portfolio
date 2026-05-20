@@ -12,10 +12,13 @@ A crawler- and AI-agent-friendly summary of this website.
 - Email: afumoons@gmail.com
 
 ## Professional focus
-Afu builds polished frontend experiences and practical full-stack systems: ERP/internal applications, CMS tools, dashboards, audit workflows, AI-integrated tools, mobile commerce flows, government portals, marketing campaign pages, and REST API-backed applications.
+Afu builds polished frontend experiences and practical full-stack systems: SaaS MVPs, ERP/internal applications, CMS tools, dashboards, audit workflows, AI-integrated tools, mobile commerce flows, government portals, marketing campaign pages, and REST API-backed applications.
 
 ## Core stack
-Laravel, PHP, JavaScript, TypeScript, React, Nuxt, Vue, Flutter, Dart, REST APIs, SQL, MySQL, PostgreSQL, SCSS, GSAP, 3D asset integration, ChatGPT/Groq LLM APIs.
+Laravel, PHP, JavaScript, TypeScript, React, Supabase, Nuxt, Vue, Flutter, Dart, REST APIs, SQL, MySQL, PostgreSQL, SCSS, GSAP, 3D asset integration, ChatGPT/Groq LLM APIs.
+
+## Project highlights
+- ClientFlow Lite: React/TypeScript/Supabase SaaS MVP for freelance developers and micro-agencies, covering project records, milestones, tasks, approvals, invoice visibility, and an Airtable-inspired GSAP interface. Live: https://afumoons.github.io/clientflow-lite/
 
 ## Experience highlights
 - Olympic Furniture Group (GMB): ERP Olympic contributions, D-Namis internal apps, Nuxt/GSAP campaign site, UI/UX refreshes, Flutter MORE App improvements.

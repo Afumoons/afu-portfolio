@@ -230,7 +230,7 @@ function App() {
             I build production-ready web and mobile applications across ERP systems, e-commerce flows, AI-integrated tools, government portals, and motion-rich frontend experiences.
           </p>
           <div className="hero-actions">
-            <a className="primary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="mailto:afusidhipamekas@gmail.com,afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu">Start a project <ArrowUpRight size={18} /></a>
+            <a className="primary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="mailto:afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu">Start a project <ArrowUpRight size={18} /></a>
             <a className="secondary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="https://github.com/Afumoons" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={18} /></a>
           </div>
           <dl className="hero-stats" aria-label="Professional snapshot">
@@ -342,8 +342,8 @@ function App() {
         <h2>Need a frontend that looks premium and a system that actually works?</h2>
         <p>Send a short brief. I can help with landing pages, ERP modules, dashboards, AI-assisted workflows, and full-stack product delivery.</p>
         <div className="contact-actions">
-          <a className="primary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="mailto:afusidhipamekas@gmail.com,afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> afusidhipamekas@gmail.com</a>
-          <a className="secondary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="mailto:afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> afumoons@gmail.com</a>
+          <a className="primary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="mailto:afumoons@gmail.com?subject=Project%20inquiry%20for%20Afu"><Mail size={18} /> afumoons@gmail.com</a>
+          <a className="secondary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="https://www.linkedin.com/in/afu-sidhi-pamekas-62b725194/" target="_blank" rel="noreferrer"><ArrowUpRight size={18} /> LinkedIn</a>
           <a className="secondary magnetic-btn" onMouseMove={handleMagneticMove} onMouseLeave={handleMagneticLeave} href="https://github.com/Afumoons" target="_blank" rel="noreferrer"><Rocket size={18} /> View GitHub</a>
         </div>
       </section>

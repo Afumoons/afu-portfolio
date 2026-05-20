@@ -6,10 +6,10 @@ A crawler- and AI-agent-friendly summary of this website.
 - Name: Afu Sidhi Pamekas
 - Also known as: Afumoons
 - GitHub: https://github.com/Afumoons
-- LinkedIn: https://linkedin.com/in/afu-sidhipamekas-62b725194
+- LinkedIn: https://www.linkedin.com/in/afu-sidhi-pamekas-62b725194/
 - Location: Surabaya, Indonesia
 - Role: Senior Full Stack Engineer
-- Email: afusidhipamekas@gmail.com, afumoons@gmail.com
+- Email: afumoons@gmail.com
 
 ## Professional focus
 Afu builds polished frontend experiences and practical full-stack systems: ERP/internal applications, CMS tools, dashboards, audit workflows, AI-integrated tools, mobile commerce flows, government portals, marketing campaign pages, and REST API-backed applications.
